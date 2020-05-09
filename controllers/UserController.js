@@ -10,7 +10,7 @@ class UserController {
     async users(ctx) {
         console.log('Controller HIT: UserController::users');
         return new Promise((resolve, reject) => {
-            const query = 'SELECT * FROM User';
+            const query = 'SELECT * FROM User;';
             
             chpConnection.query(query, (err, res) => {
                 if(err) {
@@ -62,12 +62,13 @@ class UserController {
        return new Promise((resolve, reject) => {
            const usr = ctx.request.body;
            chpConnection.query({
-               sql: `INSERT INTO User(
-                                        fname,
-                                        lname,
-                                        email,
-                                        payment
-                                        ) VALUES (?, ?, ?, ?);`,
+               sql: `INSERT INTO User
+                            (
+                            fname,
+                            lname,
+                            email,
+                            payment
+                            ) VALUES (?, ?, ?, ?);`,
                values: [usr.fname,
                         usr.lname,
                         usr.email,
