@@ -3,8 +3,8 @@ const purchaseRouter = require('koa-router')({
     prefix: '/purchase'
 });
 
-purchaseRouter.get('/', PurchaseController.getUserVideoID, PurchaseController.purchase);
-purchaseRouter.get('/all', PurchaseController.purchases);
+purchaseRouter.get('/', PurchaseController.purchases);
+purchaseRouter.get('/info', PurchaseController.getUserVideoID, PurchaseController.purchase);
 purchaseRouter.get('/user', PurchaseController.userPurchases);
 purchaseRouter.get('/:title', PurchaseController.titlePurchases);
 purchaseRouter.post('/', PurchaseController.getUserVideoID, PurchaseController.addPurchase, PurchaseController.purchase);
