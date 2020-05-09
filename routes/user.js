@@ -4,8 +4,8 @@ const userRouter = require('koa-router')({
 });
 
 
-userRouter.get('/', UserController.user);
-userRouter.get('/all', UserController.users);
+userRouter.get('/', UserController.users);
+userRouter.get('/info', UserController.user);
 userRouter.post('/', UserController.addUser, UserController.users);
 userRouter.put('/user-update', UserController.updateUser, UserController.user);
 userRouter.put('/payment-update', UserController.updateUserPayment, UserController.user);
