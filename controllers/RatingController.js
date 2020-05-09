@@ -180,7 +180,7 @@ class RatingController {
                             postedOn = current_timestamp(),
                             rating = ?,
                             r_comment = ?
-                        WHERE user_id = ? AND video_id = ?`,
+                        WHERE user_id = ? AND video_id = ?;`,
                 values: [
                         r.rating, 
                         r.r_comment, 

@@ -5,7 +5,7 @@ const videoRouter = require('koa-router')({
 
 videoRouter.get('/', VideoController.videos);
 videoRouter.get('/:video', VideoController.video);
-videoRouter.get('/Genre/:genre', VideoController.videosInGenre)
+videoRouter.get('/Genre/:genre', VideoController.videosInGenre);
 videoRouter.post('/', VideoController.addVideo, VideoController.videos);
 videoRouter.put('/:video', VideoController.updateVideoPrice, VideoController.video);
 videoRouter.put('/', VideoController.updateVideoStatus, VideoController.video);

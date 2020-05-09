@@ -167,7 +167,7 @@ class PurchasController {
                 sql: `UPDATE Purchase 
                         SET 
                             purchasedOn = current_timestamp()
-                        WHERE user_id = ? AND video_id = ?`,
+                        WHERE user_id = ? AND video_id = ?;`,
                 values: [p.user_id, p.video_id]
             }, (err, res) => {
                 if(err) {

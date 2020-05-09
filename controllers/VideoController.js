@@ -10,7 +10,7 @@ class VideoController {
     async videos(ctx) {
         console.log('Controller HIT: VideoController::videos');
         return new Promise((resolve, reject) => {
-            const query = 'SELECT * FROM Video';
+            const query = 'SELECT * FROM Video;';
             
             chpConnection.query(query, (err, res) => {
                 if(err) {
@@ -144,7 +144,7 @@ class VideoController {
                     SET 
                         price = ?
                     WHERE title = ?
-                    `,
+                    ;`,
                 values: [vd.price, ctx.params.video]
             }, (err, res) => {
                 if(err) {
