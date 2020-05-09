@@ -1,0 +1,22 @@
+{
+  "name": "cs355_project_2",
+  "version": "1.0.0",
+  "description": "p2_api",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinnyvalenz/CS355_Project_2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinnyvalenz/CS355_Project_2/issues"
+  },
+  "homepage": "https://github.com/vinnyvalenz/CS355_Project_2#readme",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  }
+}
