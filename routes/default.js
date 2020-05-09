@@ -10,7 +10,7 @@ const defaultRouter = require('koa-router')({
 
 defaultRouter.get('/', ctx => {
     ctx.status = 200;
-    ctx.body = "Default Route Found!\n";
+    ctx.body = "Project 02 Video Streaming Database!\n";
 });
 
 defaultRouter.use(
